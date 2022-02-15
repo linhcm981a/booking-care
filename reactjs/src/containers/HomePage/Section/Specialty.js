@@ -11,26 +11,52 @@ class Specialty extends Component {
       dots: false,
       infinite: true,
       speed: 500,
-      slidesToShow: 1,
+      slidesToShow: 5,
       slidesToScroll: 1,
     };
     return (
       <div className="section-specialty">
-        <div className="specialty-content">
-          <Slider {...settings}>
-            <div className="img-customize">
-              <h3>h1</h3>
-            </div>
-            <div className="img-customize">
-              <h3>h2</h3>
-            </div>
-            <div className="img-customize">
-              <h3>h3</h3>
-            </div>
-            <div className="img-customize">
-              <h3>h4</h3>
-            </div>
-          </Slider>
+        <div className="specialty-container">
+          <div className="specialty-header">
+            <span className="title-section">Chuyên khoa phổ biến </span>
+            <button className="btn-section">Xem thêm</button>
+          </div>
+          <div className="specialty-body">
+            <Slider {...settings}>
+              <div className="spcialty-customize ">
+                <div className="bg-image" />
+                <div>Cơ Xương Khớp 1</div>
+              </div>
+              <div className="spcialty-customize ">
+                <div className="bg-image" />
+                <div>Cơ Xương Khớp 2 </div>
+              </div>
+              <div className="spcialty-customize">
+                <div className="bg-image" />
+                <div>Cơ Xương Khớp 3</div>
+              </div>
+              <div className="spcialty-customize">
+                <div className="bg-image" />
+                <div>Cơ Xương Khớp 4</div>
+              </div>
+              <div className="spcialty-customize">
+                <div className="bg-image" />
+                <div>Cơ Xương Khớp 5</div>
+              </div>
+              <div className="spcialty-customize">
+                <div className="bg-image" />
+                <div>Cơ Xương Khớp 6</div>
+              </div>{" "}
+              <div className="spcialty-customize">
+                <div className="bg-image" />
+                <div>Cơ Xương Khớp 7</div>
+              </div>
+              <div className="spcialty-customize">
+                <div className="bg-image" />
+                <div>Cơ Xương Khớp 8</div>
+              </div>
+            </Slider>
+          </div>
         </div>
       </div>
     );
@@ -45,9 +71,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return {
-    changeLanguageAppRedux: (language) => dispatch(changLanguageApp(language)),
-  };
+  return {};
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Specialty);
